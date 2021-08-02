@@ -17,13 +17,9 @@ export default function Header(props) {
     }
   };
   return (
-    <header className="pt-8 flex flex-row w-88 pl-80">
-      <div className="pl-8"></div>
-      <Link to="/" className={linkStyle("Home") + " pl-80"}>
+    <header className="pt-8 flex justify-center flex-row w-88 pl-8">
+      <Link to="/" className={linkStyle("Home")}>
         Home
-      </Link>
-      <Link to="/about" className={linkStyle("About")}>
-        About
       </Link>
       <Link to="/how-it-works" className={linkStyle("How It Works")}>
         How It Works

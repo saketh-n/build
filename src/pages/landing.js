@@ -15,21 +15,32 @@ const divStyle = {
 
 export default function Landing() {
   const history = useHistory();
+
+  const handleLogin = () => {};
+
+  const handleSignUp = () => {
+    history.push("/sign-up");
+  };
+
   return (
     <div style={divStyle}>
       <Header pageName={"Home"} mode={"light"} />
       <div className="pt-64">
-        <h1 className="text-white font-sans text-6xl text-center mr-8">
-          Build
+        <h1 className="text-white font-sans text-6xl text-center">Build</h1>
+        <h1 className="text-white font-sans text-lg text-center pt-8">
+          Make something every day.
         </h1>
-        <h1 className="text-white font-sans text-lg text-center pt-8 mr-8">
-          Create. Learn. Compete
-        </h1>
-        <div className="ml-72">
-          <button className="ml-96 mt-8 text-gray-700 font-sans text-lg bg-blue-300 rounded-full py-3 px-6 hover:text-gray-200 hover:shadow-lg focus:outline-none focus:shadow-none">
+        <div className="flex justify-center">
+          <button
+            className="mt-8 text-gray-700 font-sans text-lg bg-blue-300 rounded-full py-3 px-6 hover:text-gray-200 hover:shadow-lg focus:outline-none focus:shadow-none"
+            onClick={handleSignUp}
+          >
             Sign Up
           </button>
-          <button className="ml-8 mt-8 text-gray-700 font-sans text-lg bg-green-300 rounded-full py-3 px-8 hover:text-gray-200 hover:shadow-lg focus:outline-none focus:shadow-none">
+          <button
+            className="ml-8 mt-8 text-gray-700 font-sans text-lg bg-green-300 rounded-full py-3 px-8 hover:text-gray-200 hover:shadow-lg focus:outline-none focus:shadow-none"
+            onClick={handleLogin}
+          >
             Login
           </button>
         </div>

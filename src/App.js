@@ -1,9 +1,8 @@
 import "./styles/app.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Landing from "./pages/landing";
-import Party from "./pages/party";
-import Invest from "./pages/invest";
-import Collect from "./pages/collect";
+import How from "./pages/howitworks";
+import SignUp from "./pages/signup";
 
 function App() {
   return (
@@ -13,14 +12,11 @@ function App() {
           <Route exact path="/">
             <Landing />
           </Route>
-          <Route exact path="/party">
-            <Party />
+          <Route exact path="/how-it-works">
+            <How />
           </Route>
-          <Route exact path="/invest">
-            <Invest />
-          </Route>
-          <Route exact path="/collect">
-            <Collect />
+          <Route exact path="/sign-up">
+            <SignUp />
           </Route>
         </Switch>
       </Router>
