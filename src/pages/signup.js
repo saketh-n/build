@@ -20,13 +20,13 @@ export default function SignUp() {
           </h1>
           <input
             placeholder="Create Username"
-            className="rounded-md pr-24 pl-8 py-2 my-2 focus:outline-white"
+            className="rounded-md pr-24 pl-8 py-2 my-2 focus:outline-white font-sans"
           ></input>
           <input
             placeholder="Confirm Username"
-            className="rounded-md pr-24 pl-8 py-2 mt-2 mb-6 focus:outline-white"
+            className="rounded-md pr-24 pl-8 py-2 mt-2 mb-6 focus:outline-white font-sans"
           ></input>
-          <button className="my-2 bg-green-300 py-2 rounded-md">
+          <button className="my-2 bg-green-300 py-2 rounded-md font-sans hover:text-gray-200 hover:shadow-lg focus:outline-none focus:shadow-none">
             Sign Up with GitHub
           </button>
         </div>

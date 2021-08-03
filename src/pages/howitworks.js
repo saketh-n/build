@@ -20,20 +20,22 @@ export default function How() {
       <Header pageName={"How It Works"} mode={"light"} />
       <div className="mt-32 ml-12 mr-16 flex flex-row justify-between ">
         <div className="bg-blue-200 p-4 mx-8 rounded-md bg-opacity-40 bg-clip-padding">
-          <h1 className="text-gray-200 text-3xl text-center my-8">
+          <h1 className="text-gray-200 text-3xl text-center my-8 pt-16">
             Build Habits.
           </h1>
           <h1 className="text-gray-200 text-6xl text-center my-16">👑</h1>
-          <h1 className="text-xl text-gray-100 text-justify my-8 px-12">
+          <h1 className="text-xl text-gray-100 text-justify my-8 px-12 pb-16">
             Get motivated to make something every day with a simple streak
             system tracking how many consecutive days you've worked on
             something.
           </h1>
         </div>
         <div className="bg-blue-200 p-4 mx-8 rounded-md bg-opacity-40 bg-clip-padding">
-          <h1 className="text-gray-200 text-3xl text-center my-8">Compete</h1>
+          <h1 className="text-gray-200 text-3xl text-center my-8 pt-16">
+            Compete
+          </h1>
           <h1 className="text-gray-200 text-6xl text-center my-16">⚔️</h1>
-          <h1 className="text-xl text-gray-100 text-justify my-8 px-12">
+          <h1 className="text-xl text-gray-100 text-justify my-8 px-12 pb-16">
             Test and further hone your technical and creative skills with weekly
             contests where contestants can vote on and give feedback to
             submitted projects.
