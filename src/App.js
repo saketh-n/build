@@ -4,6 +4,7 @@ import Landing from "./pages/landing";
 import How from "./pages/howitworks";
 import SignUp from "./pages/signup";
 import Profile from "./pages/profile";
+import Leaderboard from "./pages/leaderboard";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/u/:username">
             <Profile />
+          </Route>
+          <Route path="/leaderboard">
+            <Leaderboard />
           </Route>
         </Switch>
       </Router>

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 const bgImg =
   "https://images.unsplash.com/photo-1439590379928-2969603c790d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80";
@@ -13,6 +13,25 @@ const divStyle = {
 };
 
 export default function Profile() {
+  const history = useHistory();
+
+  const pictures = [
+    "https://pbs.twimg.com/profile_images/1365771430932185095/zhQD8o7Q_400x400.jpg",
+    "https://i.pinimg.com/736x/9e/77/5e/9e775ed46d1bab1fb7e874b1fad08be2.jpg",
+    "https://static.wikia.nocookie.net/unordinary6344/images/b/bc/Arlo4.png",
+    "https://static.wikia.nocookie.net/shingekinokyojin/images/a/a1/Eren_Jaeger_%28Anime%29_character_image.png",
+    "https://i.pinimg.com/originals/98/19/a2/9819a2f68bf442a2f7010753ab635e23.jpg",
+  ];
+
+  const randImg = () => {
+    const picNum = Math.floor(Math.random() * pictures.length);
+    return pictures[picNum];
+  };
+
+  const goToProject = () => {
+    history.push("https://github.com/saketh-n/build");
+  };
+
   const { username } = useParams();
   //TODO: Return something else if user authenticated
   return (
@@ -29,7 +48,7 @@ export default function Profile() {
             </h1>
           </div>
           <img
-            src="https://pbs.twimg.com/profile_images/1365771430932185095/zhQD8o7Q_400x400.jpg"
+            src={randImg() /*TODO: Gets the image from the database */}
             alt="Ijin"
             className="w-32 h-32 rounded-md"
           />
@@ -43,7 +62,10 @@ export default function Profile() {
             incentivizes people to make something every day. Includes an
             optional competitive element for those with such an inclination.
           </h1>
-          <button className="my-4 mx-8 bg-green-300 py-2 rounded-md font-sans px-16 text-gray-700 hover:text-gray-200 hover:shadow-lg focus:outline-none focus:shadow-none">
+          <button
+            onClick={goToProject}
+            className="my-4 mx-8 bg-green-300 py-2 rounded-md font-sans px-16 text-gray-700 hover:text-gray-200 hover:shadow-lg focus:outline-none focus:shadow-none"
+          >
             Link
           </button>
         </div>
